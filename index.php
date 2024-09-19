@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/logo.png"/>
+    <link rel="shortcut icon" href="assets/logo.png" />
     <title>Mansão dos Cats</title>
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/slide.css">
 </head>
 
 <body>
@@ -23,11 +24,45 @@
     </header>
 
     <main>
-        <section class="content">
-            <div class="cat-image">
-                <img src="assets/gatos.png">
+        <section class="slider">
+            <div class="slider-content">
+
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+                <input type="radio" name="btn-radio" id="radio4">
+
+                <div class="slide-box primeiro">
+                    <img class="img-desktop" src="assets/gatos.png" alt="slide1">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="assets/gatos2.png" alt="slide2">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="assets/gatos3.png" alt="slide3">
+                </div>
+                <div class="slide-box">
+                    <img class="img-desktop" src="assets/gatos4.png" alt="slide4">
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
+
             </div>
+
             <div class="buttons">
+
                 <a class="button" href="adotar.php">
                     <img src="assets/pata.png">
                     <p>QUERO ADOTAR</p>
@@ -42,6 +77,7 @@
                 </a>
 
             </div>
+
         </section>
         <section class="info">
             <div class="top-section">
@@ -68,6 +104,7 @@
         </section>
     </main>
     <script src="script.js"></script>
+    <script src="slide.js"></script>
 </body>
 
 </html>
