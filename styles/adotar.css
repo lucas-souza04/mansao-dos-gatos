@@ -136,16 +136,16 @@
     margin-right: 5px;
 }
 
-.imggatos{
-    width: 200px;
-    height: auto;
-    position: relative;
-    top: auto;
-    bottom: -10px;
-    left: 10%;
-    border-radius: 20px;
+.wallpaper{
+        background-image: url('https://files.oaiusercontent.com/file-A1NKm3M1VxZ9kTgEH5aETS3N?se=2024-11-21T05%3A39%3A09Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D113ffd6a-b55a-4488-b4be-6b3670dd1a19.webp&sig=egXCCWj4hzfB5vliqwVFz7miVKuyrjLanahcxD2v7SE%3D');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; 
+        padding: 20px; 
+
 }
-.imggatos2{
+
+ .imggatos2{
     width: 250px;
     height: auto;
     position: relative;
@@ -223,15 +223,11 @@
     bottom: 1200px;
     left: 70%;
     border-radius: 20px;
-}
+} 
 
 .texto-area {
     background-color: #f0f0f0; /* Cor de fundo */
     padding: 10px; /* Espaçamento interno */
     color: #333; /* Cor do texto */
     font-size: 16px; /* Tamanho do texto */
-}
-
-p{
-    text-rendering: auto;
 }
