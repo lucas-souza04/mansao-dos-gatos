@@ -25,8 +25,26 @@
       </div>
 
       <div class="galeia">
-      <div class="gato1">   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuYrttDhAJAdRwz-AldlRt_aFVCGMyQyy5VQ&s" alt=" gata bolharreira" class="imggatos"></div>
-       
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuYrttDhAJAdRwz-AldlRt_aFVCGMyQyy5VQ&s" alt=" gata bolharreira" class="imggatos"></div>
+        </div>
+
+        <div class="imgdetails">
+            <h3>Jeremias</h3>
+            <p>
+                Idade:   <br>
+                Peso:    <br>
+                Gosta de:
+            </p>
+        </div>
+        <button id="read_button">Ler mais</button>
+        
+    
+
+
+
+
+
       <div class="gato2"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.EKl5S2qXn30htLlZRf4QoAHaEK%26pid%3DApi&f=1&ipt=b66883c1c5892175a28dbe219b3d3e4ec5e0619c8699c0b7693db43ad7652e34&ipo=images" alt=""class="imggatos2"></div>
 
       <div class="gato3"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcatlandstorage.blob.core.windows.net%2Fcatland%2Fcatland%2F3793%2Fc5d9ea77-de0a-41e6-b052-f5d29ba8f790.jpg&f=1&nofb=1&ipt=f7317c05cd83cd92112d22b843786563a0fa7ee682336384fb08e482700400ed&ipo=images" alt="" class="imggatos3"></div>
