@@ -72,13 +72,5 @@
             <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
                 direitos reservados.</p>
         </section>
-
-
-
-
-
-
-
-
 </body>
 </html># Alterei ess aqui.
