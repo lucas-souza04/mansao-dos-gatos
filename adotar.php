@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Alterei ess aqui.
-=======
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,14 +72,6 @@
             <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
                 direitos reservados.</p>
         </section>
-
-
-
-
-
-
-
-
 </body>
 </html>
 >>>>>>> release/1.0
