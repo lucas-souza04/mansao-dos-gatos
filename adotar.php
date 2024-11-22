@@ -6,15 +6,20 @@
     <title>Adotar</title>
     <link rel="stylesheet" href="styles/adotar.css">
 </head>
+
 <body>
 <header>
         <div class="top-bar">
+        <a href="index.php">
             <img src="assets/logo.png" alt="Logo" class="logo">
-            <h2>www.mansaodoscats.org.br</h2>
+        </a>
+            <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
             <div class="social-icons">
-                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="assets/instagram.png"></a>
-                <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img src="assets/facebook.png"></a>
-                <a href="https://wa.me/5511982590004" target="_blank"><img src="assets/whatsapp.png"></a>
+                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="assets/instagram.png"
+                        alt="Instagram"></a>
+                <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
+                        src="assets/facebook.png" alt="Facebook"></a>
+                <a href="https://wa.me" target="_blank"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
             </div>
         </div>
     </header>
@@ -73,4 +78,4 @@
                 direitos reservados.</p>
         </section>
 </body>
-</html># Alterei ess aqui.
+</html>

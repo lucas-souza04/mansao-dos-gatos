@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    font-family: cursive;
+    font-style: italic;
+    font-size: 15px;
+    color: black;
+    height: 70px;
+    position: relative;
+    border-bottom: 5px solid orange;
+}
+
+.logo {
+    width: 70px;
+    height: auto;
+}
+
+.top-bar p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.top-bar h2 a {
+    color: black;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.historia {
+    margin-bottom: 40px;
+}
+
+.historia h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.historia p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.depoimentos h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.depoimentos blockquote {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.numeros h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.numeiros-estatisticas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.numero {
+    text-align: center;
+}
+
+.numero h3 {
+    font-size: 30px;
+    color: orange;
+}
+
+.numero p {
+    font-size: 16px;
+}
+
+.galeria h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.imagens-galeria {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagens-galeria img {
+    width: 32%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.info {
+    padding: 20px;
+    background-color: #dddddd;
+    border-top: 5px solid orange;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.text-section h2 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.description p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.menu-section h3 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.menu-button {
+    text-decoration: none;
+    color: #000000;
+}
+
+.menu-button:hover {
+    color: #555;
+}
+
+.copyright {
+    position: relative;
+    font-size: 15px;
+    color: #4b4848;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.copyright img {
+    width: 12px;
+    height: auto;
+    margin-right: 5px;
+}
