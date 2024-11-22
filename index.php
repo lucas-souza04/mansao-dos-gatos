@@ -33,7 +33,7 @@
                 <input type="radio" name="btn-radio" id="radio4">
 
                 <div class="slide-box primeiro">
-                    <img class="img-desktop" src="assets/gatos.png" alt="slide1">
+                    <img class="img-desktop" src="assets/gatos.jpg" alt="slide1">
                 </div>
                 <div class="slide-box">
                     <img class="img-desktop" src="assets/gatos2.png" alt="slide2">
