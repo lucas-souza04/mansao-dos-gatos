@@ -110,10 +110,6 @@ main {
     padding: 20px;
     background-color: #dddddd;
     border-top: 5px solid orange;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    margin-top: 20px;
-    box-sizing: border-box;
 }
 
 .top-section {
