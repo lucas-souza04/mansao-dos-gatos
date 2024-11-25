@@ -46,7 +46,6 @@ body {
 
 main {
   margin: 20px;
-  background-color: #dddddd;
   padding: 10px;
   border-radius: 10px;
 }
@@ -62,7 +61,6 @@ main {
   overflow: hidden;
   position: relative;
   text-align: center;
-  border: 2px solid #ccc;
   border-radius: 20px;
 }
 
