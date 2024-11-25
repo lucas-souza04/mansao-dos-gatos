@@ -45,20 +45,6 @@
                     <img class="img-desktop" src="assets/gatos4.png" alt="slide4">
                 </div>
 
-                <div class="nav-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-
-                <div class="nav-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                </div>
-
             </div>
 
             <div class="buttons">
@@ -79,7 +65,8 @@
             </div>
 
         </section>
-        <section class="info">
+    </main>
+    <section class="info">
             <div class="top-section">
                 <div class="text-section">
                     <h2>Mansão dos Cats</h2>
@@ -102,7 +89,6 @@
             <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
                 direitos reservados.</p>
         </section>
-    </main>
     <script src="script.js"></script>
     <script src="slide.js"></script>
 </body>
