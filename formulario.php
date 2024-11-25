@@ -49,8 +49,8 @@
         Como parte do processo de adoção, pedimos que seja preenchido o formulário abaixo. Com base nas suas respostas, analisaremos o seu perfil, se está apto para adotar e se o gatinho escolhido é o ideal para você. Não tenha pressa e não deixe nenhuma resposta em branco. Todas as respostas devem ser preenchidas cuidadosamente para que possamos conhecê-lo melhor.
       </p>
 
-      <h4>SOBRE VOCÊ E SUA FAMÍLIA</h4>
-      <form action="" method="POST">
+      <form action="" method="post">
+        <h4>SOBRE VOCÊ E SUA FAMÍLIA</h4>
         <div class="container-input">
           <label for="nome">NOME COMPLETO:</label>
           <input type="text" id="nome" name="nome" placeholder="NOME COMPLETO:" required>
@@ -79,7 +79,7 @@
           <label for="email">E-MAIL:</label>
           <input type="email" id="email" name="email" placeholder="E-MAIL:" required>
           <label for="telefone">TELEFONE:</label>
-          <input type="password" id="telefone" name="telefone" placeholder="TELEFONE:" required>
+          <input type="number" id="telefone" name="telefone" placeholder="TELEFONE:" required>
         </div>
 
         <div class="container-input">
@@ -123,11 +123,9 @@
           <label for="motivo-adotar">POR QUE ADOTAR UM GATINHO?</label>
           <textarea id="motivo-adotar" name="motivo-adotar" placeholder="POR QUE ADOTAR UM GATINHO?" required></textarea>
         </div>
-      </form>
 
 
-      <h4>SOBRE SUA CASA</h4><br>
-      <form action="" method="POST">
+        <h4>SOBRE SUA CASA</h4><br>
         <div>
           <p>SE SUA CASA É ALUGADA, O PROPRITÁRIO PERMITE ANIMAIS?</p><br>
           <input type="radio" id="nao" name="concorda" value="nao" required>
@@ -187,10 +185,8 @@
             </label>
           </div><br>
         </div>
-      </form>
 
-      <h4>SEUS ANIMAIS</h4>
-      <form action="" method="POST">
+        <h4>SEUS ANIMAIS</h4>
         <fieldset>
           <legend>JÁ TEVE GATOS?</legend>
           <label for="teve-gatos-sim">
@@ -234,11 +230,9 @@
             Não
           </label>
         </fieldset>
-      </form>
 
 
-      <h4>ADOÇÃO É COMPROMISSO E RESPONSABILIDADE</h4><br>
-      <form action="" method="POST">
+        <h4>ADOÇÃO É COMPROMISSO E RESPONSABILIDADE</h4><br>
         <div class="container-input">
           <input type="text" name="planejamento" placeholder="HÁ QUANTO TEMPO VOCÊ ESTÁ PLANEJANDO ESSA ADOÇÃO?" required><br>
           <input type="text" name="responsavel-viagem" placeholder="QUEM CUIDARÁ DO GATO QUANDO FOR VIAJAR A TRABALHO OU DE FÉRIAS?" required><br><br>
@@ -299,13 +293,10 @@
               Não sei
             </label>
           </fieldset><br>
-
         </div>
-      </form>
 
 
-      <h4>CONDIÇÕES</h4><br>
-      <form action="" method="POST">
+        <h4>CONDIÇÕES</h4><br>
         <p>VOCÊ CONCORDA...</p>
 
         <fieldset>
@@ -351,11 +342,8 @@
           </label><br>
         </fieldset><br>
 
-      </form>
 
-
-      <h4>COMENTÁRIOS</h4><br>
-      <form action="" method="POST">
+        <h4>COMENTÁRIOS</h4><br>
         <fieldset>
           <legend>COMO VOCÊ CONHECEU A MANSÃO DOS CATS?</legend>
           <label for="indicacao-amigos">
@@ -392,7 +380,7 @@
           <legend>INFORMAÇÕES IMPORTANTES</legend>
           <textarea id="info" name="info" rows="10" cols="50" readonly>
       IMPORTANTE: Abandonar, soltar, deixar fugir, não alimentar, acorrentar, bater, amedrontar e deixar acasalar indiscriminadamente são formas de maus tratos com pena prevista na lei. O Adote um Gatinho atuará conforme artigo 164 do Código Penal, artigo 32 da Lei Federal 9.605, de 12 de fevereiro de 1998 (Lei de Crimes Ambientais), e da Lei Municipal 13.131, de 18 de maio de 2001 (Lei de Posse Responsável), contra qualquer um que descumpra as determinações previstas, sejam estes adotantes ou não. Em caso de dúvidas, busque informações e auxílios de profissionais veterinários e nunca de curiosos ou da internet.
-    </textarea>
+          </textarea>
         </fieldset>
 
         <br><br>
@@ -403,7 +391,6 @@
         <!-- Botão de enviar -->
         <button type="submit">ENVIAR FORMULÁRIO</button>
       </form>
-
 
       <section class="info">
         <div class="top-section">
