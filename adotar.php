@@ -64,7 +64,7 @@
                 <img src="assets/logo.png" alt="Logo" class="logo">
             </div>
             <div class="box">
-                <img src="assets/imagem10.png" alt="Imagem 10">
+                <img src="assets/imagem10.jpg" alt="Imagem 10">
                 <img src="assets/logo.png" alt="Logo" class="logo">
             </div>
             <div class="box">
