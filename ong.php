@@ -63,7 +63,7 @@
                 <img src="assets/evento3.jpeg" alt="Evento 3">
             </div>
         </section>
-
+    </main>
         <section class="info">
             <div class="top-section">
                 <div class="text-section">
@@ -86,7 +86,5 @@
             </div>
             <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os direitos reservados.</p>
         </section>
-    </main>
-    </main>
 </body>
 </html>

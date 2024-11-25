@@ -98,6 +98,7 @@ main {
 .imagens-galeria {
     display: flex;
     justify-content: space-between;
+    border-bottom: 10px solid #ffffff;
 }
 
 .imagens-galeria img {
