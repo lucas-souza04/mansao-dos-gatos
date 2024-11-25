@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria</title>
     <link rel="stylesheet" href="styles/adotar.css">
 </head>
+
 <body>
     <header>
         <div class="top-bar">
@@ -25,20 +27,57 @@
 
     <main>
         <div class="container">
-            <div class="box"><img src="assets/imagem1.jpg" alt="Imagem 1"></div>
-            <div class="box"><img src="assets/imagem2.jpg" alt="Imagem 2"></div>
-            <div class="box"><img src="assets/imagem3.jpg" alt="Imagem 3"></div>
-            <div class="box"><img src="assets/imagem4.jpg" alt="Imagem 4"></div>
-            <div class="box"><img src="assets/imagem5.jpg" alt="Imagem 5"></div>
-            <div class="box"><img src="assets/imagem6.png" alt="Imagem 6"></div>
-            <div class="box"><img src="assets/imagem7.png" alt="Imagem 7"></div>
-            <div class="box"><img src="assets/imagem8.jpg" alt="Imagem 8"></div>
-            <div class="box"><img src="assets/imagem9.jpg" alt="Imagem 9"></div>
-            <div class="box"><img src="assets/imagem10.png" alt="Imagem 10"></div>
-            <div class="box"><img src="assets/imagem11.png" alt="Imagem 11"></div>
-            <div class="box"><img src="assets/imagem12.jpg" alt="Imagem 12"></div>
+            <div class="box">
+                <img src="assets/imagem1.jpg" alt="Imagem 1">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem2.jpg" alt="Imagem 2">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem3.jpg" alt="Imagem 3">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem4.jpg" alt="Imagem 4">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem5.jpg" alt="Imagem 5">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem6.png" alt="Imagem 6">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem7.png" alt="Imagem 7">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem8.jpg" alt="Imagem 8">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem9.jpg" alt="Imagem 9">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem10.png" alt="Imagem 10">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem11.png" alt="Imagem 11">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
+            <div class="box">
+                <img src="assets/imagem12.jpg" alt="Imagem 12">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </div>
         </div>
     </main>
+
 
     <section class="info">
         <div class="top-section">
@@ -64,4 +103,5 @@
             direitos reservados.</p>
     </section>
 </body>
+
 </html>
