@@ -12,9 +12,9 @@
 <body>
     <header>
         <div class="top-bar">
-        <a href="index.php">
-            <img src="assets/logo.png" alt="Logo" class="logo">
-        </a>
+            <a href="index.php">
+                <img src="assets/logo.png" alt="Logo" class="logo">
+            </a>
             <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
             <div class="social-icons">
                 <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="assets/instagram.png"
