@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/logo.png" />
+    <link rel="shortcut icon" href="../assets/images/logo.png" />
     <title>Mansão dos Cats</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/slide.css">
+    <link rel="stylesheet" href="../assets/styles/index.css">
+    <link rel="stylesheet" href="../assets/styles/slide.css">
 </head>
 
 <body>
     <header>
         <div class="top-bar">
-            <img src="assets/logo.png" alt="Logo" class="logo">
+            <img src="../assets/images/logo.png" alt="Logo" class="logo">
             <h2>www.mansaodoscats.org.br</h2>
             <div class="social-icons">
-                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="assets/instagram.png"></a>
+                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"></a>
                 <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
-                        src="assets/facebook.png"></a>
-                <a href="https://wa.me/5511982590004" target="_blank"><img src="assets/whatsapp.png"></a>
+                        src="../assets/images/facebook.png"></a>
+                <a href="https://wa.me/5511982590004" target="_blank"><img src="../assets/images/whatsapp.png"></a>
             </div>
         </div>
     </header>
@@ -34,16 +34,16 @@
                 <input type="radio" name="btn-radio" id="radio4">
 
                 <div class="slide-box primeiro">
-                    <img class="img-desktop" src="assets/gatos.jpg" alt="slide1">
+                    <img class="img-desktop" src="../assets/images/gatos.jpg" alt="slide1">
                 </div>
                 <div class="slide-box">
-                    <img class="img-desktop" src="assets/gatos2.png" alt="slide2">
+                    <img class="img-desktop" src="../assets/images/gatos2.png" alt="slide2">
                 </div>
                 <div class="slide-box">
-                    <img class="img-desktop" src="assets/gatos3.png" alt="slide3">
+                    <img class="img-desktop" src="../assets/images/gatos3.png" alt="slide3">
                 </div>
                 <div class="slide-box">
-                    <img class="img-desktop" src="assets/gatos4.png" alt="slide4">
+                    <img class="img-desktop" src="../assets/images/gatos4.png" alt="slide4">
                 </div>
 
             </div>
@@ -51,15 +51,15 @@
             <div class="buttons">
 
                 <a class="button" href="adotar.php">
-                    <img src="assets/pata.png">
+                    <img src="../assets/images/pata.png">
                     <p>QUERO ADOTAR</p>
                 </a>
                 <a class="button" href="ajudar.php">
-                    <img src="assets/coracao.png">
+                    <img src="../assets/images/coracao.png">
                     <p>QUERO AJUDAR</p>
                 </a>
                 <a class="button" href="ong.php">
-                    <img src="assets/mansao.png" alt="Logo da Mansão dos Gatos">
+                    <img src="../assets/images/mansao.png" alt="Logo da Mansão dos Gatos">
                     <p>A ONG</p>
                 </a>
 
@@ -87,11 +87,11 @@
                 </div>
             </div>
         </div>
-        <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
+        <p class="copyright"><img src="../assets/images/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
             direitos reservados.</p>
     </section>
-    <script src="script.js"></script>
-    <script src="slide.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/slide.js"></script>
 </body>
 
 </html>
