@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Nós - Mansão dos Cats</title>
-    <link rel="stylesheet" href="styles/ong.css">
+    <link rel="stylesheet" href="../assets/styles/ong.css">
 </head>
 
 <body>
     <header>
         <div class="top-bar">
             <a href="index.php">
-                <img src="assets/logo.png" alt="Logo" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo" class="logo">
             </a>
             <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
             <div class="social-icons">
-                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="assets/instagram.png"
+                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"
                         alt="Instagram"></a>
                 <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
-                        src="assets/facebook.png" alt="Facebook"></a>
-                <a href="https://wa.me" target="_blank"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
+                        src="../assets/images/facebook.png" alt="Facebook"></a>
+                <a href="https://wa.me" target="_blank"><img src="../assets/images/whatsapp.png" alt="WhatsApp"></a>
             </div>
         </div>
     </header>
@@ -74,9 +74,9 @@
         <section class="galeria">
             <h2>Galeria de Fotos</h2>
             <div class="imagens-galeria">
-                <img src="assets/evento1.png" alt="Evento 1">
-                <img src="assets/evento2.jpg" alt="Evento 2">
-                <img src="assets/evento3.jpeg" alt="Evento 3">
+                <img src="../assets/images/evento1.png" alt="Evento 1">
+                <img src="../assets/images/evento2.jpg" alt="Evento 2">
+                <img src="../assets/images/evento3.jpeg" alt="Evento 3">
             </div>
         </section>
     </main>
@@ -100,7 +100,7 @@
                 </div>
             </div>
         </div>
-        <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os direitos
+        <p class="copyright"><img src="../assets/images/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os direitos
             reservados.</p>
     </section>
 </body>

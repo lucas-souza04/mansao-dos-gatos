@@ -4,24 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/logo.png" />
+    <link rel="shortcut icon" href="../assets/images/logo.png" />
     <title>Quero Ajudar - Mansão dos Cats</title>
-    <link rel="stylesheet" href="styles/ajudar.css">
+    <link rel="stylesheet" href="../assets/styles/ajudar.css">
 </head>
 
 <body>
     <header>
         <div class="top-bar">
             <a href="index.php">
-                <img src="assets/logo.png" alt="Logo" class="logo">
+                <img src="../assets/images/logo.png" alt="Logo" class="logo">
             </a>
             <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
             <div class="social-icons">
-                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="assets/instagram.png"
+                <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"
                         alt="Instagram"></a>
                 <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
-                        src="assets/facebook.png" alt="Facebook"></a>
-                <a href="https://wa.me" target="_blank"><img src="assets/whatsapp.png" alt="WhatsApp"></a>
+                        src="../assets/images/facebook.png" alt="Facebook"></a>
+                <a href="https://wa.me" target="_blank"><img src="../assets/images/whatsapp.png" alt="WhatsApp"></a>
             </div>
         </div>
     </header>
@@ -48,7 +48,7 @@
             <h1>Pix dos Gatinhos</h1><br>
             <div class="pix-image">
                 <h2>Pix Celular: (11) 98259-0004</h2><br>
-                <img src="assets/pix.png">
+                <img src="../assets/images/pix.png">
             </div>
             <br>
             <h1>Doações em Produtos</h1><br>
@@ -83,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <p class="copyright"><img src="assets/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
+            <p class="copyright"><img src="../assets/images/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
                 direitos reservados.</p>
         </section>
     </main>
