@@ -1,5 +1,13 @@
 <?php
-include 'config.php';
+include('../config.php');
+
+// Verifica se o ID foi enviado pela URL
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+  $id = intval($_GET['id']); // Converte para inteiro para segurança
+} else {
+  echo "Nenhum gato selecionado.";
+  exit;
+}
 
 if ($id) {
   // Consulta as informações dos gatos no banco de dados
@@ -35,8 +43,10 @@ $conn->close();
 <body>
   <header>
     <div class="top-bar">
-      <img src="../assets/images/logo.png" alt="Logo" class="logo">
-      <h2>www.mansaodoscats.org.br</h2>
+      <a href="index.php">
+        <img src="../assets/images/logo.png" alt="Logo" class="logo">
+      </a>
+      <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
       <div class="social-icons">
         <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"></a>
         <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
@@ -71,6 +81,12 @@ $conn->close();
     <div>
       <h2>Descrição</h2>
       <p><?php echo nl2br(htmlspecialchars($gato['desc_detalhada'])); ?></p>
+    </div>
+    <div class="interesse">
+      <form action="formulario.php" method="POST">
+        <input type="hidden" name="gato_id" value="<?php echo htmlspecialchars($gato['id']); ?>">
+        <button type="submit" class="btn-interesse">TENHO INTERESSE</button>
+      </form>
     </div>
   </main>
 
