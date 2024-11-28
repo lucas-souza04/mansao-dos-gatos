@@ -56,12 +56,12 @@
                 Remédios veterinários: Enropet, Baytril, etc.Remédios humanos: Cobavital, Metronidazol, etc.
                 Descartáveis: Seringas, luvas, esparadrapo, etc. Papelaria e limpeza: Papel sulfite, álcool 70%,
                 etc..<br>Para saber como entregar sua doação pessoalmente, entrar em contato conosco pelo <a
-                    href="https://wa.me/5511982590004">Whatsapp.</a></p>
+                    href="https://wa.me/5511982590004" target="_blank">Whatsapp.</a></p>
             <br>
             <h1>Apadrinhando um Gatinho</h1><br>
             <p>Seja madrinha ou padrinho dos nossos gatinhos. Você faz uma contribuição fixa mensal e ajuda a pagar
                 pelas despesas do gatinho escolhido.<br>Para saber sobre como apadrinhar um gatinho entre em contato
-                conosco pelo <a href="https://wa.me/5511982590004">Whatsapp.</a></p>
+                conosco pelo <a href="https://wa.me/5511982590004" target="_blank">Whatsapp.</a></p>
         </div>
         <section class="info">
             <div class="top-section">

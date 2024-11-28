@@ -1,3 +1,11 @@
+<?php
+include_once('../config.php');
+
+// Consulta para obter somente os gatos disponíveis para adoção
+$sql = "SELECT * FROM tb_gatos WHERE adotado = FALSE";
+$result = $conn->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
