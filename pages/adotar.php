@@ -2,7 +2,7 @@
 include_once('../config.php');
 
 // Consulta para obter somente os gatos disponíveis para adoção
-$sql = "SELECT * FROM tb_gatos WHERE adotado = FALSE";
+$sql = "SELECT id, nome, sexo, foto FROM tb_gatos WHERE adotado = FALSE";
 $result = $conn->query($sql);
 ?>
 
@@ -35,79 +35,23 @@ $result = $conn->query($sql);
 
     <main>
         <div class="container">
-            <div class="box">
-                <a href="gatos.php?id=1">
-                    <img src="../assets/images/gatos/Mingau.png" alt="Imagem 1">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=2">
-                    <img src="../assets/images/gatos/Tigrao.png" alt="Imagem 2">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=3">
-                    <img src="../assets/images/gatos/Luna.png" alt="Imagem 3">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=4">
-                    <img src="../assets/images/gatos/Bella.png" alt="Imagem 4">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=5">
-                    <img src="../assets/images/gatos/Mimi.png" alt="Imagem 5">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=6">
-                    <img src="../assets/images/gatos/Pepper.png" alt="Imagem 6">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=7">
-                    <img src="../assets/images/gatos/Shadow.png" alt="Imagem 7">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=8">
-                    <img src="../assets/images/gatos/Nina.png" alt="Imagem 8">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=9">
-                    <img src="../assets/images/gatos/Bento.png" alt="Imagem 9">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=10">
-                    <img src="../assets/images/gatos/Malu.png" alt="Imagem 10">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=11">
-                    <img src="../assets/images/gatos/Rex.png" alt="Imagem 11">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-            <div class="box">
-                <a href="gatos.php?id=12">
-                    <img src="../assets/images/gatos/Flora.png" alt="Imagem 12">
-                </a>
-                <img src="../assets/images/logo.png" alt="Logo" class="logo">
-            </div>
-        </div>
+        <?php
+        if ($result->num_rows > 0) {
+            // Loop através dos resultados
+            while ($row = $result->fetch_assoc()) {
+                echo "<div class='box'>";
+                echo "<a href='gatos.php?id=" . htmlspecialchars($row["id"]) . "'>";
+                echo "<img src='" . htmlspecialchars($row['foto']) . "' alt='Foto de " . htmlspecialchars($row['nome']) . "'>";
+                echo "</a>";
+                echo "<img src='../assets/images/logo.png' alt='Logo' class='logo'>";
+                echo "</div>";
+            }
+        } else {
+            echo "<li>Sem dados disponíveis.</li>";
+        }
+        
+        ?>
+    
     </main>
 
 
