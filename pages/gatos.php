@@ -85,7 +85,7 @@ $conn->close();
     <div class="interesse">
       <form action="formulario.php" method="POST">
         <input type="hidden" name="gato_id" value="<?php echo htmlspecialchars($gato['id']); ?>">
-        <button type="submit" class="btn-interesse">TENHO INTERESSE</button>
+        <button type="submit" class="btn-interesse" onclick="location.href='formulario.php'">TENHO INTERESSE</button>
       </form>
     </div>
   </main>
