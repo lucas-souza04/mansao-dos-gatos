@@ -2,11 +2,6 @@
 include('../config.php');
 
 
-if (isset($_FILES['foto'])) {
-
-  echo "arquivo reconhecido";
-
-}
 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -23,51 +18,49 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
   // Verificando se o arquivo foi enviado
   if (isset($_FILES['foto']) && $_FILES['foto']['error'] === UPLOAD_ERR_OK) {
-    echo "arquivo reconhecido";
     $foto = $_FILES['foto'];
     $diretorio = '../assets/images/gatos/';
     $foto_nome = uniqid() . '_' . basename($foto['name']);
     $caminho_foto = $diretorio . $foto_nome;
-
-    echo "$caminho_foto";
-
+    
+    
     // Criar o diretório se não existir
     if (!is_dir($diretorio)) {
-        mkdir($diretorio, 0777, true);
+      mkdir($diretorio, 0777, true);
     }
     // print_r($_POST);
-
+    
     if (move_uploaded_file($foto['tmp_name'], $caminho_foto)) {
       
       $stmt = $conn->prepare("INSERT INTO tb_gatos (nome, sexo, cor_pelo, cor_olhos, tm_pelagem, dt_nasc_aprox, dt_resgate, desc_detalhada, foto, adotado) 
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
   
-      // Verifica se a preparação da consulta foi bem-sucedida
-      if (!$stmt) {
-        die("Erro na preparação da consulta: " . $conn->error);
-      }
+  // Verifica se a preparação da consulta foi bem-sucedida
+  if (!$stmt) {
+    die("Erro na preparação da consulta: " . $conn->error);
+  }
   
-      // Faz o bind dos parâmetros
-      $stmt->bind_param(
-        "sssssssssb", // Ajuste os tipos conforme as colunas da sua tabela
-        $nome,
-        $sexo,
-        $cor_pelo,
-        $cor_olhos,
-        $tm_pelagem,
-        $dt_nasc_aprox,
-        $dt_resgate,
-        $desc_detalhada,
-        $caminho_foto,
-        $adotado
-      );
+  // Faz o bind dos parâmetros
+  $stmt->bind_param(
+    "sssssssssb", // Ajuste os tipos conforme as colunas da sua tabela
+    $nome,
+    $sexo,
+    $cor_pelo,
+    $cor_olhos,
+    $tm_pelagem,
+    $dt_nasc_aprox,
+    $dt_resgate,
+    $desc_detalhada,
+    $caminho_foto,
+    $adotado
+  );
   
-      // Executa a consulta
-      if ($stmt->execute()) {
-        echo "Registro inserido com sucesso!";
-      } else {
-        echo "Erro ao inserir registro: " . $stmt->error;
-      }
+  // Executa a consulta
+  if ($stmt->execute()) {
+    echo "Registro inserido com sucesso!";
+  } else {
+    echo "Erro ao inserir registro: " . $stmt->error;
+  }
   
       $stmt->close();
     }
@@ -153,12 +146,6 @@ $conn->close();
 
         <label for="nome">Descrição detalhada:</label>
         <input type="text" id="desc" name="desc" required><br><br>
-        <?php
-        echo "<pre>";
-        print_r($_FILES);
-        print_r($_POST);
-        echo "</pre>";
-        ?>
         <button type="submit">Salvar</button>
       </form>
     </div>
