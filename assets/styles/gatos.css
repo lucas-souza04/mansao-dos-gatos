@@ -16,6 +16,7 @@
   height: 70px;
   position: relative;
   border-bottom: 5px solid orange;
+  background-color: white;
 }
 
 .logo {
@@ -26,6 +27,11 @@
 .top-bar p {
   margin: 0;
   font-size: 20px;
+}
+
+.top-bar h2 a {
+  color: black;
+  text-decoration: none;
 }
 
 .social-icons img {
@@ -71,6 +77,87 @@
 
 .button:hover {
   text-decoration: none;
+}
+
+main {
+  background-color: #eeeaea;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.container h1,
+.container h2 {
+  color: #000000;
+  font-size: 22px;
+  font-family: Arial, sans-serif;
+}
+
+.container .box {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.container .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.container ul li {
+  color: #3a3737;
+  font-size: 15px;
+  margin: 5px 0;
+}
+
+.container div p {
+  color: #3a3737;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.btn-interesse {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(255, 165, 0, 0.8);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.btn-interesse:hover {
+  background-color: orange;
 }
 
 .info {
@@ -135,53 +222,4 @@
   width: 12px;
   height: auto;
   margin-right: 5px;
-}
-
-section.slider {
-  margin: 0;
-  width: 100%;
-  height: 100vh;
-  padding: 0 !important;
-  overflow: hidden;
-}
-
-.slider-content {
-  width: 400%;
-  height: 100%;
-  display: flex;
-  object-fit: cover;
-}
-
-.slider-content input {
-  display: none;
-}
-
-.slide-box {
-  width: 25%;
-  height: 100%;
-  position: relative;
-  text-align: center;
-  transition: 1s;
-}
-
-.slide-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#radio1:checked ~ .primeiro {
-  margin-left: 0%;
-}
-
-#radio2:checked ~ .primeiro {
-  margin-left: -25%;
-}
-
-#radio3:checked ~ .primeiro {
-  margin-left: -50%;
-}
-
-#radio4:checked ~ .primeiro {
-  margin-left: -75%;
 }

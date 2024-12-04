@@ -56,15 +56,17 @@ $conn->close();
     </div>
   </header>
 
-  <h1>Sobre <?php echo htmlspecialchars($gato['nome']); ?></h1>
-
   <main>
-    <!-- Exibe a foto do gato -->
-    <?php if (!empty($gato['foto'])): ?>
-      <img src="<?php echo htmlspecialchars($gato['foto']); ?>" alt="Foto de <?php echo htmlspecialchars($gato['nome']); ?>">
-    <?php else: ?>
-      <p>Foto não disponível.</p>
-    <?php endif; ?>
+  <div class="container">
+    <h1>Sobre <?php echo htmlspecialchars($gato['nome']); ?></h1>
+    
+    <div class="box">
+      <?php if (!empty($gato['foto'])): ?>
+        <img src="<?php echo htmlspecialchars($gato['foto']); ?>" alt="Foto de <?php echo htmlspecialchars($gato['nome']); ?>">
+      <?php else: ?>
+        <p>Foto não disponível.</p>
+      <?php endif; ?>
+    </div>
 
     <ul>
       <li><strong>Sexo:</strong> <?php echo htmlspecialchars($gato['sexo']); ?></li>
@@ -75,20 +77,22 @@ $conn->close();
                                                 echo $gato['dt_nasc_aprox'] ? date('d/m/Y', strtotime($gato['dt_nasc_aprox'])) : 'Não informada';
                                                 ?></li>
       <li><strong>Data Aproximada do Resgate:</strong> <?php
-                                                        echo date('d/m/Y', strtotime($gato['dt_resgate']));
-                                                        ?></li>
+                                                        echo date('d/m/Y', strtotime($gato['dt_resgate'])); ?></li>
     </ul>
+    
     <div>
       <h2>Descrição</h2>
       <p><?php echo nl2br(htmlspecialchars($gato['desc_detalhada'])); ?></p>
     </div>
+    
     <div class="interesse">
       <form action="formulario.php" method="POST">
         <input type="hidden" name="gato_id" value="<?php echo htmlspecialchars($gato['id']); ?>">
-        <button type="submit" class="btn-interesse" onclick="location.href='formulario.php'">TENHO INTERESSE</button>
+        <button type="submit" class="btn-interesse">TENHO INTERESSE</button>
       </form>
     </div>
-  </main>
+  </div>
+</main>
 
   <section class="info">
     <div class="top-section">
