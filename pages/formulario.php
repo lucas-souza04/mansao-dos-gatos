@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,22 +13,10 @@
     href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Maitree:wght@200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap"
     rel="stylesheet">
 </head>
+
 <body>
-  <header>
-    <div class="top-bar">
-      <a href="index.php">
-        <img src="../assets/images/logo.png" alt="Logo" class="logo">
-      </a>
-      <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"
-            alt="Instagram"></a>
-        <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
-            src="../assets/images/facebook.png" alt="Facebook"></a>
-        <a href="https://wa.me" target="_blank"><img src="../assets/images/whatsapp.png" alt="WhatsApp"></a>
-      </div>
-    </div>
-  </header><br>
+  <?php include('../includes/header.php'); ?>
+  <br>
   <main>
     <div class="container">
       <div class="inicio">
@@ -53,67 +42,68 @@
         </p>
       </div><br>
       <div class="dados">
-            <h4>SEUS DADOS</h4>
-            <div class="linha">
-    <div class="nome">
-      <label for="nome">NOME COMPLETO:</label>
-      <input type="text" id="nome" name="nome" placeholder="" required>
-    </div>
-    <div class="telefone">
-      <label for="telefone">TELEFONE:</label>
-      <input type="number" id="telefone" name="telefone" placeholder="" required>
-    </div>
-  </div>
-  <div class="linha">
-    <div class="email">
-      <label for="email">E-MAIL:</label>
-      <input type="email" id="email" name="email" placeholder="" required>
-    </div>
-    <div class="profissao">
-      <label for="profissao">PROFISSÃO:</label>
-      <input type="text" id="profissao" name="profissao" placeholder="" required>
-    </div>
-  </div>
-  <div class="linha">
-    <div class="cep">
-      <label for="cep">CEP:</label>
-      <input type="text" id="cep" name="cep" placeholder="" required>
-    </div>
-    <div class="logradouro">
-      <label for="logradouro">RUA:</label>
-      <input type="text" id="logradouro" name="logradouro" placeholder="" required>
-    </div>
-    <div class="numero">
-      <label for="numero">NÚMERO:</label>
-      <input type="text" id="numero" name="numero" placeholder="" required>
-    </div>
-  </div>
-  <div class="linha">
-    <div class="complemento">
-      <label for="complemento">COMPL.:</label>
-      <input type="text" id="complemento" name="complemento" placeholder="">
-    </div>
-    <div class="bairro">
-      <label for="bairro">BAIRRO:</label>
-      <input type="text" id="bairro" name="bairro" placeholder="" required>
-    </div>
-    <div class="cidade">
-      <label for="cidade">CIDADE:</label>
-      <input type="text" id="cidade" name="cidade" placeholder="" required>
-    </div>
-  </div>
-</div><br>
-      <div class="adotou">
-            <fieldset>
-              <legend>JÁ ADOTOU ANTES?</legend>
-              <label for="sim">
-                <input type="radio" id="sim" name="concorda" value="sim"> Sim
-              </label>
-              <label for="nao">
-                <input type="radio" id="nao" name="concorda" value="nao"> Não
-              </label>
-            </fieldset><br><br>
+        <form action="../pages/enviar_formulario.php" method="post">
+        <h4>SEUS DADOS</h4>
+        <div class="linha">
+          <div class="nome">
+            <label for="nome">NOME COMPLETO:</label>
+            <input type="text" id="nome" name="nome" placeholder="" required>
           </div>
+          <div class="telefone">
+            <label for="telefone">TELEFONE:</label>
+            <input type="number" id="telefone" name="telefone" placeholder="" required>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="email">
+            <label for="email">E-MAIL:</label>
+            <input type="email" id="email" name="email" placeholder="" required>
+          </div>
+          <div class="profissao">
+            <label for="profissao">PROFISSÃO:</label>
+            <input type="text" id="profissao" name="profissao" placeholder="" required>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="cep">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="" required>
+          </div>
+          <div class="logradouro">
+            <label for="logradouro">RUA:</label>
+            <input type="text" id="logradouro" name="logradouro" placeholder="" required>
+          </div>
+          <div class="numero">
+            <label for="numero">NÚMERO:</label>
+            <input type="text" id="numero" name="numero" placeholder="" required>
+          </div>
+        </div>
+        <div class="linha">
+          <div class="complemento">
+            <label for="complemento">COMPL.:</label>
+            <input type="text" id="complemento" name="complemento" placeholder="">
+          </div>
+          <div class="bairro">
+            <label for="bairro">BAIRRO:</label>
+            <input type="text" id="bairro" name="bairro" placeholder="" required>
+          </div>
+          <div class="cidade">
+            <label for="cidade">CIDADE:</label>
+            <input type="text" id="cidade" name="cidade" placeholder="" required>
+          </div>
+        </div>
+      </div><br>
+      <div class="adotou">
+        <fieldset>
+          <legend>JÁ ADOTOU ANTES?</legend>
+          <label for="sim">
+            <input type="radio" id="sim" name="concorda" value="sim"> Sim
+          </label>
+          <label for="nao">
+            <input type="radio" id="nao" name="concorda" value="nao"> Não
+          </label>
+        </fieldset><br><br>
+      </div>
       <div class="casa">
         <fieldset>
           <legend>SUA CASA É TELADA?</legend>
@@ -123,41 +113,41 @@
           <label for="nao">Não</label><br>
         </fieldset>
       </div><br><br>
-     <div class="animais">
+      <div class="animais">
         <div>
-        <fieldset>
-          <legend>TEM OUTROS ANIMAIS EM CASA?</legend>
-          <label for="nao-tem-animais">
-            <input type="radio" id="nao-tem-animais" name="outros-animais" value="nao" required>
-            Não
-          </label><br>
-          <label for="gato">
-            <input type="radio" id="gato" name="outros-animais" value="gato" required>
-            Sim, gato(s)
-          </label><br>
-          <label for="cachorro">
-            <input type="radio" id="cachorro" name="outros-animais" value="cachorro" required>
-            Sim, cachorro(s)
-          </label><br>
-          <label for="passaro">
-            <input type="radio" id="passaro" name="outros-animais" value="passaro" required>
-            Sim, passáro(s)
-          </label><br>
-          <label for="outros">
-            <input type="radio" id="outros" name="outros-animais" value="outros" required>
-            Sim, outro(s)<br> <input type="text" placeholder="Qual(s)?" style="font-size: 10px;">
-          </label>
+          <fieldset>
+            <legend>TEM OUTROS ANIMAIS EM CASA?</legend>
+            <label for="nao-tem-animais">
+              <input type="radio" id="nao-tem-animais" name="outros-animais" value="nao" required>
+              Não
+            </label><br>
+            <label for="gato">
+              <input type="radio" id="gato" name="outros-animais" value="gato" required>
+              Sim, gato(s)
+            </label><br>
+            <label for="cachorro">
+              <input type="radio" id="cachorro" name="outros-animais" value="cachorro" required>
+              Sim, cachorro(s)
+            </label><br>
+            <label for="passaro">
+              <input type="radio" id="passaro" name="outros-animais" value="passaro" required>
+              Sim, passáro(s)
+            </label><br>
+            <label for="outros">
+              <input type="radio" id="outros" name="outros-animais" value="outros" required>
+              Sim, outro(s)<br> <input type="text" placeholder="Qual(s)?" style="font-size: 10px;">
+            </label>
           </fieldset><br><br>
         </div>
       </div>
       <div class="condicao">
-        <h4>ADOÇÃO É COMPROMISSO E RESPONSABILIDADE</h4><br>        
+        <h4>ADOÇÃO É COMPROMISSO E RESPONSABILIDADE</h4><br>
         <small style="font-size: 1.2em;">**Saiba que você terá que acrescentar no seu orçamento os gastos com alimentação de boa qualidade
-            (aproximadamente R$ 170 por mês), vacinas e atendimento veterinário (aproximadamente R$ 400 anualmente).</small><br><br><br>
-            <div class="">
-            <label for="motivo-adotar">POR QUE QUER ADOTAR UM GATINHO?</label><br>
-            <textarea id="motivo-adotar" name="motivo-adotar" placeholder="" required></textarea>
-          </div>
+          (aproximadamente R$ 170 por mês), vacinas e atendimento veterinário (aproximadamente R$ 400 anualmente).</small><br><br><br>
+        <div class="">
+          <label for="motivo-adotar">POR QUE QUER ADOTAR UM GATINHO?</label><br>
+          <textarea id="motivo-adotar" name="motivo-adotar" placeholder="" required></textarea>
+        </div>
         <div class="">
           <div>
             <label>HÁ QUANTO TEMPO VOCÊ ESTÁ PLANEJANDO ESSA ADOÇÃO?</label>
@@ -281,30 +271,8 @@
       </div>
   </main>
   <br>
-  <section class="info">
-    <div class="top-section">
-      <div class="text-section">
-        <h2>Mansão dos Cats</h2>
-        <div class="description">
-          <p>A Mansão dos Cats busca lares para gatos encontrados abandonados na Grande São Paulo<br>e
-            também trabalha para conscientizar as pessoas sobre a importância da castração e
-            posse<br>responsável. Também, resgata, trata, castra e doa gatinhos para lares seguros em
-            São Paulo.</p>
-        </div>
-      </div>
-      <div class="menu-section">
-        <h3>Menu</h3>
-        <ul class="menu-buttons">
-          <li><a href="ong.php" class="menu-button" aria-label="Saiba mais sobre a ONG">A ONG</a></li>
-          <li><a href="adotar.php" class="menu-button" aria-label="Acesse o formulário para adoção">Quero adotar</a>
-          </li>
-          <li><a href="ajudar.php" class="menu-button" aria-label="Descubra como você pode ajudar">Quero ajudar</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="copyright"><img src="../assets/images/copyright.png" alt="Copyright" aria-hidden="true">2024 - Mansão dos
-      Cats. Todos os direitos reservados.</p>
-  </section>
+  <?php include('../includes/footer.php'); ?>
   <script src="../assets/js/cep.js"></script>
 </body>
+
 </html>

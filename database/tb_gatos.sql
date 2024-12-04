@@ -7,12 +7,10 @@ CREATE TABLE tb_gatos (
     tm_pelagem ENUM('Curta', 'Média', 'Longa') NOT NULL, 
     dt_nasc_aprox DATE,               
     dt_resgate DATE NOT NULL,         
-    desc_detalhada TEXT               
+    desc_detalhada TEXT,              
+    foto LONGBLOB DEFAULT NULL,       
+    adotado BOOLEAN DEFAULT FALSE    
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-ALTER TABLE tb_gatos ADD COLUMN foto LONGBLOB DEFAULT NULL;
-
-ALTER TABLE tb_gatos ADD COLUMN adotado BOOLEAN DEFAULT FALSE;
 
 INSERT INTO tb_gatos (nome, sexo, cor_pelo, cor_olhos, tm_pelagem, dt_nasc_aprox, dt_resgate, desc_detalhada, foto)
 VALUES 

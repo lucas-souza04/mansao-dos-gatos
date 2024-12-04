@@ -1,9 +1,6 @@
 <?php
 include('../config.php');
 
-
-
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Obtendo os dados do formulário
   $nome = $_POST['nome'];
@@ -22,46 +19,48 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $diretorio = '../assets/images/gatos/';
     $foto_nome = uniqid() . '_' . basename($foto['name']);
     $caminho_foto = $diretorio . $foto_nome;
-    
-    
+
+
     // Criar o diretório se não existir
     if (!is_dir($diretorio)) {
       mkdir($diretorio, 0777, true);
     }
     // print_r($_POST);
-    
+
     if (move_uploaded_file($foto['tmp_name'], $caminho_foto)) {
-      
+
       $stmt = $conn->prepare("INSERT INTO tb_gatos (nome, sexo, cor_pelo, cor_olhos, tm_pelagem, dt_nasc_aprox, dt_resgate, desc_detalhada, foto, adotado) 
   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-  
-  // Verifica se a preparação da consulta foi bem-sucedida
-  if (!$stmt) {
-    die("Erro na preparação da consulta: " . $conn->error);
-  }
-  
-  // Faz o bind dos parâmetros
-  $stmt->bind_param(
-    "sssssssssb", // Ajuste os tipos conforme as colunas da sua tabela
-    $nome,
-    $sexo,
-    $cor_pelo,
-    $cor_olhos,
-    $tm_pelagem,
-    $dt_nasc_aprox,
-    $dt_resgate,
-    $desc_detalhada,
-    $caminho_foto,
-    $adotado
-  );
-  
-  // Executa a consulta
-  if ($stmt->execute()) {
-    echo "Registro inserido com sucesso!";
-  } else {
-    echo "Erro ao inserir registro: " . $stmt->error;
-  }
-  
+
+      // Verifica se a preparação da consulta foi bem-sucedida
+      if (!$stmt) {
+        die("Erro na preparação da consulta: " . $conn->error);
+      }
+
+      // Faz o bind dos parâmetros
+      $stmt->bind_param(
+        "sssssssssb", // Ajuste os tipos conforme as colunas da sua tabela
+        $nome,
+        $sexo,
+        $cor_pelo,
+        $cor_olhos,
+        $tm_pelagem,
+        $dt_nasc_aprox,
+        $dt_resgate,
+        $desc_detalhada,
+        $caminho_foto,
+        $adotado
+      );
+
+      if ($stmt->execute()) {
+        // Redirecionar após o sucesso
+        echo "<script>alert('Registro inserido com sucesso!');</script>";
+        header("Location: {$_SERVER['PHP_SELF']}");
+        exit(); // Garante que o restante do código não será executado
+      } else {
+        echo "Erro ao inserir registro: " . $stmt->error;
+      }
+
       $stmt->close();
     }
     // Inserindo os dados no banco de dados
@@ -71,8 +70,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $conn->close();
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -90,29 +87,14 @@ $conn->close();
 </head>
 
 <body>
-
-  <header>
-    <div class="top-bar">
-      <a href="index.php">
-        <img src="../assets/images/logo.png" alt="Logo" class="logo">
-      </a>
-      <h2><a href="index.php">www.mansaodoscats.org.br</a></h2>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"
-            alt="Instagram"></a>
-        <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
-            src="../assets/images/facebook.png" alt="Facebook"></a>
-        <a href="https://wa.me" target="_blank"><img src="../assets/images/whatsapp.png" alt="WhatsApp"></a>
-      </div>
-    </div>
-  </header>
+  <?php include('../includes/header.php'); ?>
   <br>
   <main>
     <div class="container">
-      <h4>DADOS DO GATINHO</h4>
+      <h4>DADOS DO GATINHO</h4><br>
       <form action="" method="POST" enctype="multipart/form-data">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
+        <input type="text" id="nome" name="nome" placeholder="Digite o nome do gatinho" required><br><br>
 
         <label for="idade">Data de Nascimento Aproximado:</label>
         <input type="date" id="idade" name="idade" required><br><br>
@@ -121,10 +103,10 @@ $conn->close();
         <input type="date" id="resgate" name="resgate" required><br><br>
 
         <label for="cor">Cor do Pelo:</label>
-        <input type="text" id="cor" name="cor" required><br><br>
+        <input type="text" id="cor" name="cor" placeholder="Digite a cor do pelo do gatinho" required><br><br>
 
         <label for="cor_olhos">Cor dos Olhos:</label>
-        <input type="text" id="olhos" name="olhos" required><br><br>
+        <input type="text" id="olhos" name="olhos" placeholder="Digite a cor dos olhos do gatinho" required><br><br>
 
         <label for="tipo_pelagem">Tipo da Pelagem:</label>
         <select id="tipo_pelagem" name="tipo_pelagem" required>
@@ -144,39 +126,15 @@ $conn->close();
         <label for="foto">Foto:</label>
         <input type="file" id="foto" name="foto" accept="image/*" required><br><br>
 
-        <label for="nome">Descrição detalhada:</label>
-        <input type="text" id="desc" name="desc" required><br><br>
+        <label for="desc">Descrição detalhada:</label>
+        <textarea id="desc" name="desc" placeholder="Descreva o gatinho" rows="4" required></textarea><br><br>
         <button type="submit">Salvar</button>
       </form>
     </div>
 
   </main>
   <br>
-  <section class="info">
-    <div class="top-section">
-      <div class="text-section">
-        <h2>Mansão dos Cats</h2>
-        <div class="description">
-          <p>A Mansão dos Cats busca lares para gatos encontrados abandonados na Grande São Paulo<br>e
-            também trabalha para conscientizar as pessoas sobre a importância da castração e
-            posse<br>responsável. Também, resgata, trata, castra e doa gatinhos para lares seguros em
-            São Paulo.</p>
-        </div>
-      </div>
-      <div class="menu-section">
-        <h3>Menu</h3>
-        <ul class="menu-buttons">
-          <li><a href="ong.php" class="menu-button" aria-label="Saiba mais sobre a ONG">A ONG</a></li>
-          <li><a href="adotar.php" class="menu-button" aria-label="Acesse o formulário para adoção">Quero adotar</a>
-          </li>
-          <li><a href="ajudar.php" class="menu-button" aria-label="Descubra como você pode ajudar">Quero ajudar</a></li>
-        </ul>
-      </div>
-    </div>
-    <p class="copyright"><img src="../assets/images/copyright.png" alt="Copyright" aria-hidden="true">2024 - Mansão dos
-      Cats. Todos os direitos reservados.</p>
-  </section>
-
+  <?php include('../includes/footer.php'); ?>
 </body>
 
 </html>
