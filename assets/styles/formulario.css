@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -13,10 +13,10 @@
   font-style: italic;
   font-size: 15px;
   color: black;
-  background-color: rgba(255, 255, 255, 0.8);
   height: 70px;
   position: relative;
   border-bottom: 5px solid orange;
+  background-color: white;
 }
 
 .logo {
@@ -27,6 +27,11 @@
 .top-bar p {
   margin: 0;
   font-size: 20px;
+}
+
+.top-bar h2 a {
+  color: black;
+  text-decoration: none;
 }
 
 .social-icons img {
@@ -138,14 +143,23 @@
 }
 
 body{
-  background-color: #FFE8D1;
+  background-color: #eeeaea;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 main{
   display: flex;
   justify-content: center;
-  margin: 0 auto;
-  width: 65%;
+  margin:0 auto;
+  width: 50%;
+  background-color: white;
 }
 
 h1, h4{
@@ -156,7 +170,7 @@ h1, h4{
   font-optical-sizing: auto;
   font-weight: 800;
   font-style: normal;
-  color: #00AFB9;
+  color: black;
 }
 p{
   font-size: 20px;
@@ -182,7 +196,8 @@ label{
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  color: #08415C;
+  color: #000000;
+  font-weight: bold;
 }
 
 legend{
@@ -191,149 +206,103 @@ legend{
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  color: #08415C;
+  color: #000000;
 }
-
 
 input{
   font-size: 15px;
   padding: 10px;
   border-radius: 5px;
   border: none;
-  border-bottom: 3px solid #08415C;
-  background-color: #faefe5;
+  border-bottom: 3px solid #000000;
 }
 
 fieldset{
-  border: 3px solid #08415C;
+  border: 3px solid #000000;
   padding: 10px;
-}
-textarea{
-  background-color: #faefe5;
 }
 
 .condicao p{
-  color:  #3D0B37;
+  color:  #000000;
   font-weight: 600;
 }
 
-.first-column input{
-  display: block;
-  margin-right: auto;
-  width: 98%;
-}
-.second-column input{
-  display: block;
-  margin-right: auto;
-  width: 98%;
-}
-
-.test{
-  display: flex;
-}
-
-.first-column{
-  width: 50%;
-}
-
-.second-column{
-  width: 50%;
-}
-
-.familia .container input{
-  display: block;
-  width: 99%;
-}
-
-.familia .adotou{
-  text-align: center;
-  padding: 15px;
-  width: 100%;
-}
 .dados {
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
-.dados .first-column{
-  width: 35%;
-}
-.dados .second-column{
-  width: 35%;
-}
-.dados .third-column{
-  width: 35%;
-}
-.dados .first-column label{
-  margin-left: auto;
-  margin-top: 10px;
-  width: 33%;
-}
-.dados .first-column input{
-  width: 96%;
-}
-.dados .second-column input{
-  width: 96%;
-}
-.dados .third-column input{
-  width: 96%;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.complemento{
+.linha {
   display: flex;
-  width: 100%;
-}
-.complemento .first-column{
-  width: 70%;
-}
-.complemento .second-column{
-  display: flex;
-  width: 29%;
-  margin-top: 20px;
-}
-.complemento .second-column label{
-  display: block;
-  margin: auto;
-}
-.complemento .second-column input{
-  display: block;
-  margin: auto;
-}
-.filhos .test{
-  justify-content: center;
-  width: 100%;
-}
-.filhos .first-column{
-   display: flex;
-   width: 100%;
-}
-.filhos .first-column input{
-  width: 100px;
-  height: 40px;
-  margin-left: 5px;
-}
-.filhos .first-column label{
-  margin-top: 20px;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  gap: 15px;
 }
 
-textarea{
-  resize: none;
-  width: 100%;
-  height: 100px;
-  font-size: 17px;
+.nome {
+  flex: 70;
+}
+
+.telefone {
+  flex: 30;
+}
+
+.email {
+  flex: 50;
+}
+
+.profissao {
+  flex: 50;
+}
+
+.cep {
+  flex: 20;
+}
+
+.logradouro {
+  flex: 60;
+}
+
+.numero {
+  flex: 20;
+}
+
+.complemento {
+  flex: 10;
+}
+
+.bairro {
+  flex: 40;
+}
+
+.cidade {
+  flex: 40;
 }
 
 button{
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-  background-color: #00AFB9;
-  font-size: 15px;
-  font-weight: 600;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
   color: white;
+  background-color: rgba(255, 165, 0, 0.8);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  font-family: Arial, sans-serif;
 }
 
 button:hover{
-  background-color: #002d30;
+  background-color: orange;
+}
+
+input[type="text"], input[type="email"], input[type="number"], textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
