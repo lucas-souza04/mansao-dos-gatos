@@ -81,6 +81,11 @@ main {
   border-radius: 0;
 }
 
+.box:hover{
+  top:-2px;box-shadow:0 4px 4px orange;
+  transition: all 0.5s ease-in-out
+}
+
 .info {
   padding: 20px;
   background-color: #dddddd;
@@ -144,3 +149,4 @@ main {
   height: auto;
   margin-right: 5px;
 }
+
