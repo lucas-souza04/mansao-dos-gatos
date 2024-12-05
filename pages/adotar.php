@@ -22,23 +22,34 @@ $result = $conn->query($sql);
 
     <main>
         <div class="container">
-            <?php
-            if ($result->num_rows > 0) {
-                // Loop através dos resultados
-                while ($row = $result->fetch_assoc()) {
-                    echo "<div class='box'>";
-                    echo "<a href='gatos.php?id=" . htmlspecialchars($row["id"]) . "'>";
-                    echo "<img src='" . htmlspecialchars($row['foto']) . "' alt='Foto de " . htmlspecialchars($row['nome']) . "'>";
-                    echo "</a>";
-                    echo "<img src='../assets/images/logo.png' alt='Logo' class='logo'>";
-                    echo "</div>";
+        <?php
+        if ($result->num_rows > 0) {
+            // Loop através dos resultados
+            while ($row = $result->fetch_assoc()) {
+                $pronome;
+                if ($row['sexo'] == 'Fêmea') {
+                    $pronome = 'a';
+                }else{
+                    $pronome = 'o';
                 }
-            } else {
-                echo "<li>Sem dados disponíveis.</li>";
+
+                echo "<div class='box'>";
+                echo "<a href='gatos.php?id=" . htmlspecialchars($row["id"]) . "'>";
+                echo "<img src='" . htmlspecialchars($row['foto']) . "' alt='Foto de " . htmlspecialchars($row['nome']) . "'>";
+                echo "</a>";
+                echo "<img src='../assets/images/logo.png' alt='Logo' class='logo'>";
+                // echo "<div class='zap'";
+                // echo "";
+                echo "<a href='https://wa.me/5511982590004?text=Olá+Tudo+bem?+Gostaria+de+falar+sobre+" .htmlspecialchars(string: $pronome) . "+" . htmlspecialchars($row['nome']) . "'target='_blank'> <img src='../assets/images/whatsapp.png' alt='zap' class='zap'> </a>";
+                // echo "</div>";
+                echo "</div>";
             }
-
-            ?>
-
+        } else {
+            echo "<li>Sem dados disponíveis.</li>";
+        }
+            
+        ?>
+            
     </main>
 
     <section class="info">
