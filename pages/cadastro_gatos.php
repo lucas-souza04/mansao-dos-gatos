@@ -1,6 +1,13 @@
 <?php
 include('../config.php');
 
+session_start();
+
+if (!isset($_SESSION['admin_authenticated']) || $_SESSION['admin_authenticated'] !== true) {
+    header('Location: ../pages/admin_login.php');
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
   // Obtendo os dados do formulário
   $nome = $_POST['nome'];
