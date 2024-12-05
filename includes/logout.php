@@ -1,6 +1,7 @@
 <?php
 session_start();
+session_unset();
 session_destroy();
-header('Location: ../pages/admin_login.php');
+header('Location: ../pages/index.php');
 exit();
 ?>

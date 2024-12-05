@@ -52,9 +52,10 @@
                 conosco pelo <a href="https://wa.me/5511982590004" target="_blank">Whatsapp.</a></p>
         </div>
 
-        <?php include('../includes/footer.php'); ?>
-
     </main>
+
+    <?php include('../includes/footer.php'); ?>
+
 </body>
 
 </html>

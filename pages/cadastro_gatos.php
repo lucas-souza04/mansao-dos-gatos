@@ -4,8 +4,8 @@ include('../config.php');
 session_start();
 
 if (!isset($_SESSION['admin_authenticated']) || $_SESSION['admin_authenticated'] !== true) {
-    header('Location: ../pages/admin_login.php');
-    exit();
+  header('Location: ../pages/admin_login.php');
+  exit();
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -94,7 +94,24 @@ $conn->close();
 </head>
 
 <body>
-  <?php include('../includes/header.php'); ?>
+  <header>
+    <div class="top-bar">
+      <a href="../includes/logout.php">
+        <img src="../assets/images/logo.png" alt="Logo" class="logo">
+      </a>
+      <h2>
+        <a href="../includes/logout.php">www.mansaodoscats.org.br</a>
+      </h2>
+
+      <div class="social-icons">
+        <a href="https://www.instagram.com/mansaodoscats/" target="_blank"><img src="../assets/images/instagram.png"
+            alt="Instagram"></a>
+        <a href="https://www.facebook.com/mansaodoscats?locale=pt_BR" target="_blank"><img
+            src="../assets/images/facebook.png" alt="Facebook"></a>
+        <a href="https://wa.me" target="_blank"><img src="../assets/images/whatsapp.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+  </header>
   <br>
   <main>
     <div class="container">
@@ -141,7 +158,29 @@ $conn->close();
 
   </main>
   <br>
-  <?php include('../includes/footer.php'); ?>
+
+  <section class="info">
+    <div class="top-section">
+      <div class="text-section">
+        <h2>Mansão dos Cats</h2>
+        <div class="description">
+          <p>A Mansão dos Cats busca lares para gatos encontrados abandonados na Grande São Paulo<br>e
+            também trabalha para conscientizar as pessoas sobre a importância da castração e
+            posse<br>responsável. Também, resgata, trata, castra e doa gatinhos para lares seguros em
+            São Paulo.</p>
+        </div>
+      </div>
+      <div class="menu-section">
+        <h3>Menu</h3>
+        <div class="menu-buttons">
+          <a href="administrar.php" class="menu-button">Gerenciamento de gatos</a>
+        </div>
+      </div>
+    </div>
+    <p class="copyright"><img src="../assets/images/copyright.png" alt="Copyright">2024 - Mansão dos Cats. Todos os
+      direitos reservados.</p>
+  </section>
+
 </body>
 
 </html>
